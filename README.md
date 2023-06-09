@@ -27,7 +27,7 @@ processManagement:
 
 # 配置端口
 net:
-   bindIp: localhost
+   bindIp: 0.0.0.0
    port: 27017
 
 # 数据存放位置
