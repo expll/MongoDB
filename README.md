@@ -85,5 +85,34 @@ vim /etc/init.d/mongodb-start.sh
 ```
 
 
+# 关闭conf中验证
+```
+ps aux | grep mongo
+kill
+重启
+mongod -f /usr/local/mongodb/conf/mongod.conf
+```
+
+# 查看用户情况
+```
+db.getUsers()
+{ users: [], ok: 1 }
+没有用户， 所以需要添加用户
+admin> db.createUser({
+...   user: "root",
+...   pwd: "wanglei@123",
+...   roles: ["root"]
+... })
+{ ok: 1 }
+
+```
+既然有了一个用户了就可以开启conf中验证， 重启mongodb
+
+
+
+
+
+
+
 
 
