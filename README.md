@@ -48,3 +48,42 @@ security:
 
 ### 启动： mongod -f conf/mongod.conf 
 
+### 下载mongosh
+```
+https://www.mongodb.com/docs/mongodb-shell
+卸载这个文件mongosh-1.9.1-linux-x64.tgz并且解压，然后将/bin下的
+mongosh  mongosh_crypt_v1.so  拷贝到 
+/usr/local/mongodb/bin
+执行：
+# mongosh
+test>
+```
+
+### 自启动运行mongodb
+
+```
+vim /etc/init.d/mongodb-start.sh
+写入以下内容
+#!/bin/bash
+# chkconfig: 2345 80 20
+# description: MongoDB Start Service
+
+### BEGIN INIT INFO
+# Provides:          mongodb-start
+# Required-Start:    $network $syslog
+# Required-Stop:     $network $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: MongoDB Start Service
+### END INIT INFO
+/usr/local/mongodb/bin/mongod -f /usr/local/mongodb/conf/mongod.conf
+
+(注释是必须的)
+
+# chkconfig --add mongodb-start.sh
+# chkconfig mongodb-start.sh on
+```
+
+
+
+
