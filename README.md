@@ -109,6 +109,13 @@ admin> db.createUser({
 既然有了一个用户了就可以开启conf中验证， 重启mongodb
 
 
+# 如果是centos环境安装mongod-shell:
+```
+yum install mongodb-mongosh-shared-openssl11-1.10.1.x86_64.rpm
+安装完成之后，在
+/usr/bin/mongosh
+```
+
 
 
 
