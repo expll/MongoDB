@@ -102,6 +102,7 @@ admin> db.createUser({user: "root", pwd: "wanglei@123", roles: ["root"]})
 { ok: 1 }
 
 ```
+db.auth("root", "wanglei@123")
 既然有了一个用户了就可以开启conf中验证， 重启mongodb
 
 
