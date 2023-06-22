@@ -98,11 +98,7 @@ mongod -f /usr/local/mongodb/conf/mongod.conf
 db.getUsers()
 { users: [], ok: 1 }
 没有用户， 所以需要添加用户
-admin> db.createUser({
-...   user: "root",
-...   pwd: "wanglei@123",
-...   roles: ["root"]
-... })
+admin> db.createUser({user: "root", pwd: "wanglei@123", roles: ["root"]})
 { ok: 1 }
 
 ```
