@@ -59,7 +59,7 @@ mongosh  mongosh_crypt_v1.so  拷贝到
 test>
 ```
 
-### 自启动运行mongodb
+### 自启动运行mongodb (mongodb-start.sh 需要运行权限)
 
 ```
 vim /etc/init.d/mongodb-start.sh
